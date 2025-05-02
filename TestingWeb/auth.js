@@ -13,7 +13,7 @@ function setupAuth() {
             `;
         } else {
             authContainer.innerHTML = `
-                <button id="login-btn" onclick="window.location.href='login.html'">Login</button>
+                <button id="login-btn" onclick="window.location.href='./login.html'">Login</button>
             `;
         }
     }

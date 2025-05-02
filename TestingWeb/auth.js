@@ -1,4 +1,3 @@
-// ---- Auth Setup ----
 function setupAuth() {
     const authContainer = document.getElementById("auth-container");
     const loggedInUser = localStorage.getItem("loggedInUser");
@@ -13,11 +12,12 @@ function setupAuth() {
             `;
         } else {
             authContainer.innerHTML = `
-                <button id="login-btn" onclick="window.location.href='login.html'">Login</button>
+                <button id="login-btn" onclick="window.location.href='../../login.html'">Login</button>
             `;
         }
     }
 }
+
 
 function logout() {
     localStorage.removeItem("loggedInUser");

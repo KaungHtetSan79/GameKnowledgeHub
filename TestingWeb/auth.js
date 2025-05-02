@@ -2,6 +2,12 @@ function setupAuth() {
     const authContainer = document.getElementById("auth-container");
     const loggedInUser = localStorage.getItem("loggedInUser");
 
+    // Dynamically build path to login.html relative to current location
+    const getLoginPath = () => {
+        let depth = window.location.pathname.split('/').length - 2; // subtract empty & filename
+        return '../'.repeat(depth) + 'login.html';
+    };
+
     if (authContainer) {
         if (loggedInUser) {
             authContainer.innerHTML = `
@@ -11,12 +17,14 @@ function setupAuth() {
                 </div>
             `;
         } else {
+            const loginPath = getLoginPath();
             authContainer.innerHTML = `
-                <button id="login-btn" onclick="window.location.href='login.html'">Login</button>
+                <button id="login-btn" onclick="window.location.href='${loginPath}'">Login</button>
             `;
         }
     }
 }
+
 
 
 function logout() {

@@ -4,7 +4,7 @@ function setupAuth() {
 
     // Dynamically build path to login.html relative to current location
     const getLoginPath = () => {
-        let depth = window.location.pathname.split('/').length - 2; // subtract empty & filename
+        let depth = window.location.pathname.split('/').length - 1; // subtract empty & filename
         return '../'.repeat(depth) + 'login.html';
     };
 

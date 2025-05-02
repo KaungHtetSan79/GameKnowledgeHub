@@ -127,22 +127,22 @@
 <body class="dark-mode">
     <header>
         <div class="logo">
-            <img src="image/Logo.png" alt="Logo" />
+            <img id="logo-img" alt="Logo" />
         </div>
 
         <div class="search-container">
             <input type="text" placeholder="Search bar" class="search-bar" id="search-input" />
-            <img src="../image/Search.png" alt="Search" class="search-icon" />
+            <img id="search-icon" alt="Search" class="search-icon" />
         </div>
 
         <nav id="nav-menu">
-            <a href="index.html"><button>Home</button></a>
-            <a href="./TestingWeb/game-guides.html"><button>Game Guides</button></a>
-            <a href="./TestingWeb/news.html"><button>News</button></a>
-            <a href="./TestingWeb/contact.html"><button>Contact</button></a>
-            <a href="./TestingWeb/"><button>About Us</button></a>
+            <a id="home-link"><button>Home</button></a>
+            <a id="guides-link"><button>Game Guides</button></a>
+            <a id="news-link"><button>News</button></a>
+            <a id="contact-link"><button>Contact</button></a>
+            <a id="about-link"><button>About Us</button></a>
             <div id="auth-container"></div>
-            <a href="./TestingWeb/edit-profile.html"><button>Edit Profile</button></a>
+            <a id="edit-profile-link"><button>Edit Profile</button></a>
             <button id="theme-toggle">Toggle Mode</button>
         </nav>
 
@@ -150,6 +150,7 @@
             &#9776;
         </div>
     </header>
+
 
     <main>
         <section class="content-grid">
@@ -180,7 +181,7 @@
             <div class="news-grid">
                 <a href="news.html?title=Daily%20Deals%3A%20SteelSeries%20Arctis%20Nova%20Pro&image=new1.jpg&text=Huge%20savings%20on%20headphones%2C%20LEGOs%2C%20and%20more."
                     class="news-card">
-                    <img src="../image/new1.jpg" alt="News Image" width="80" />
+                    <img src="image/new1.jpg" alt="News Image" width="80" />
                     <div class="news-content">
                         <h2>Daily Deals: SteelSeries Arctis Nova Pro...</h2>
                         <p>4h ago - Huge savings on headphones, LEGOs, and more.</p>
@@ -189,7 +190,7 @@
 
                 <a href="news.html?title=Mortal%20Kombat%202%20Cast%20and%20Characters&image=new2.jpg&text=Heroes%20and%20villains%2C%20both%20new%20and%20old..."
                     class="news-card">
-                    <img src="../image/new2.jpg" alt="News Image" width="80" />
+                    <img src="image/new2.jpg" alt="News Image" width="80" />
                     <div class="news-content">
                         <h2>Mortal Kombat 2 Cast and Characters</h2>
                         <p>4h ago - Heroes and villains, both new and old...</p>
@@ -198,7 +199,7 @@
 
                 <a href="news.html?title=Imported%20Xbox%20Series%20X%20From%20%24315%2C%20PS5%20Disc%20Edition%20for%20%24398&image=new3.jpg&text=Keep%20an%20eye%20on%20the%20upcoming."
                     class="news-card">
-                    <img src="../image/new3.jpg" alt="News Image" width="80" />
+                    <img src="image/new3.jpg" alt="News Image" width="80" />
                     <div class="news-content">
                         <h2>Imported Xbox Series X From $315, PS5 Disc Edition for $398</h2>
                         <p>6h ago - Keep an eye on the upcoming.</p>
@@ -210,41 +211,48 @@
         <section class="game-info">
             <div class="most-popular">
                 <h2>Most Popular Game</h2>
-                <div class="popular-card">
-                    <img src="../image/popular1.jpg" alt="Game Image" width="80" />
+
+                <a href="#"
+                    onclick="openGuide('Tom Rider', 'Lara Croft travels around the world searching for lost artefacts...', 'image/popular1.jpg')"
+                    class="popular-card">
+                    <img src="image/popular1.jpg" alt="Game Image" width="80" />
                     <div class="popular-content">
                         <h3>Tom Rider</h3>
                         <p>Lara Croft travels around the world searching for lost artefacts...</p>
                     </div>
-                </div>
-                <div class="popular-card">
-                    <img src="../image/popular2.jpg" alt="Game Image" width="80" />
+                </a>
+
+                <a href="#"
+                    onclick="openGuide('The Last Of Us Part 1', 'Joel is hired to smuggle Ellie out of a military quarantine zone...', 'image/popular2.jpg')"
+                    class="popular-card">
+                    <img src="image/popular2.jpg" alt="Game Image" width="80" />
                     <div class="popular-content">
                         <h3>The Last Of Us Part 1</h3>
                         <p>Joel is hired to smuggle Ellie out of a military quarantine zone...</p>
                     </div>
-                </div>
+                </a>
             </div>
+
 
             <div class="latest-cheat">
                 <h2>Latest Cheat</h2>
                 <div class="cheat-card">
-                    <img src="../image/cheat1.jpg" alt="Cheat Image" width="80" />
+                    <img src="image/cheat1.jpg" alt="Cheat Image" width="80" />
                     <div class="cheat-content">
                         <h3>Guardians of the Galaxy</h3>
                         <p>Details about the cheat.</p>
                         <button
-                            onclick="openGuide('Guardians of the Galaxy', 'Details about Guardians of the Galaxy cheat.', '../image/cheat1.jpg')">View
+                            onclick="openGuide('Guardians of the Galaxy', 'Details about Guardians of the Galaxy cheat.', 'image/cheat1.jpg')">View
                             Cheat</button>
                     </div>
                 </div>
                 <div class="cheat-card">
-                    <img src="../image/cheat2.jpg" alt="Cheat Image" width="80" />
+                    <img src="image/cheat2.jpg" alt="Cheat Image" width="80" />
                     <div class="cheat-content">
                         <h3>Ghost of Tsushima</h3>
                         <p>Details about the cheat.</p>
                         <button
-                            onclick="openGuide('Ghost of Tsushima', 'Details about Ghost of Tsushima cheat.', '../image/cheat2.jpg')">View
+                            onclick="openGuide('Ghost of Tsushima', 'Details about Ghost of Tsushima cheat.', 'image/cheat2.jpg')">View
                             Cheat</button>
                     </div>
                 </div>
@@ -252,7 +260,7 @@
         </section>
     </main>
 
-    <div w3-include-html="footer.html"></div>
+    <div w3-include-html="TestingWeb/footer.html"></div>
 
     <!-- 🔍 Search Script -->
     <script>
@@ -281,7 +289,35 @@
         document.getElementById("hamburger-menu").addEventListener("click", function () {
             document.getElementById("nav-menu").classList.toggle("active");
         });
+
+        function openGuide(title, description, image) {
+            const encodedTitle = encodeURIComponent(title);
+            const encodedDescription = encodeURIComponent(description);
+            const encodedImage = encodeURIComponent(image);
+
+            window.location.href =
+                `TestingWeb/game-guides.html?title=${encodedTitle}&description=${encodedDescription}&image=${encodedImage}`;
+        }
     </script>
+    <script>
+        const isSubPage = location.pathname.includes("TestingWeb");
+        const path = isSubPage ? "../" : "";
+
+        // Dynamically update the paths for logo, search icon, and nav links
+        document.getElementById("logo-img").src = path + "image/Logo.png";
+        document.getElementById("search-icon").src = path + "image/Search.png";
+
+        // Correctly navigate to the root page (index.html) from any subpage
+        document.getElementById("home-link").href = path + "index.html";
+        document.getElementById("guides-link").href = path + "TestingWeb/game-guides.html";
+        document.getElementById("news-link").href = path + "TestingWeb/news.html";
+        document.getElementById("contact-link").href = path + "TestingWeb/contact.html";
+        document.getElementById("about-link").href = path + "TestingWeb/about.html";
+        document.getElementById("edit-profile-link").href = path + "TestingWeb/edit-profile.html";
+    </script>
+
+
+
 </body>
 
 </html>

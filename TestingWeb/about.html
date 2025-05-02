@@ -166,26 +166,25 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../image/Logo.png" alt="Logo">
+            <img id="logo-img" alt="Logo" />
         </div>
 
         <div class="search-container">
-            <input type="text" placeholder="Search" class="search-bar">
-            <img src="../image/Search.png" alt="Search" class="search-icon">
+            <input type="text" placeholder="Search bar" class="search-bar" id="search-input" />
+            <img id="search-icon" alt="Search" class="search-icon" />
         </div>
 
         <nav id="nav-menu">
-            <a href="index.html"><button>Home</button></a>
-            <a href="game-guides.html"><button>Game Guides</button></a>
-            <a href="news.html"><button>News</button></a>
-            <a href="contact.html"><button>Contact</button></a>
-            <a href="about.html"><button>About Us</button></a>
+            <a id="home-link"><button>Home</button></a>
+            <a id="guides-link"><button>Game Guides</button></a>
+            <a id="news-link"><button>News</button></a>
+            <a id="contact-link"><button>Contact</button></a>
+            <a id="about-link"><button>About Us</button></a>
             <div id="auth-container"></div>
-            <a href="edit-profile.html"><button>Edit Profile</button></a>
+            <a id="edit-profile-link"><button>Edit Profile</button></a>
             <button id="theme-toggle">Toggle Mode</button>
         </nav>
 
-        <!-- Hamburger Icon -->
         <div class="hamburger-menu" id="hamburger-menu">
             &#9776;
         </div>
@@ -238,6 +237,22 @@
         document.getElementById("hamburger-menu").addEventListener("click", function () {
             document.getElementById("nav-menu").classList.toggle("active");
         });
+    </script>
+
+    <script>
+        const isSubPage = location.pathname.includes("TestingWeb");
+
+        const path = isSubPage ? "../" : "";
+
+        document.getElementById("logo-img").src = path + "image/Logo.png";
+        document.getElementById("search-icon").src = path + "image/Search.png";
+
+        document.getElementById("home-link").href = path + "index.html";
+        document.getElementById("guides-link").href = path + "TestingWeb/game-guides.html";
+        document.getElementById("news-link").href = path + "TestingWeb/news.html";
+        document.getElementById("contact-link").href = path + "TestingWeb/contact.html";
+        document.getElementById("about-link").href = path + "TestingWeb/about.html";
+        document.getElementById("edit-profile-link").href = path + "TestingWeb/edit-profile.html";
     </script>
 </body>
 

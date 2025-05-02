@@ -1,0 +1,473 @@
+/* Default Dark Mode Styles */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Header */
+header {
+    background-color: black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #666;
+    transform: scale(1.05);
+}
+
+/* Search Bar */
+
+ .search-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.search-bar {
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-bar {
+    padding-left: 30px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.categories button {
+    padding: 20px;
+    background: #555;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 180px;
+    text-align: center;
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.categories button:hover {
+    background: #777;
+    transform: scale(1.05);
+}
+
+/* Content Grid */
+.content-grid {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* Advertisement */
+.advertisement {
+    flex: 2;
+    background: #333;
+    padding: 50px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.advertisement h2 {
+    margin: 10px;
+    padding: 10px;
+}
+
+.advertisement img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.advertisement img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Latest Guides */
+.latest-guides {
+    flex: 1;
+    background: #444;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.lg-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.lg-image img {
+    width: 40%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.lg-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.lg-image p {
+    flex: 1;
+    min-width: 50%;
+}
+
+/* Latest News */
+.latest-news {
+    padding: 20px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.news-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 10px;
+    background: #333;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.news-card:hover {
+    background: #555;
+    transform: scale(1.03);
+}
+
+.news-card img {
+    width: 250px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+/* Game Info */
+.game-info {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Most Popular & Latest Cheat */
+.most-popular, .latest-cheat {
+    flex: 1;
+    background: #444;
+    padding: 20px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Card Style */
+.popular-card, .cheat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #333;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.popular-card:hover, .cheat-card:hover {
+    background: #555;
+    transform: scale(1.03);
+}
+
+.popular-card img, .cheat-card img {
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.popular-content, .cheat-content {
+    flex: 1;
+}
+
+.latest-cheat button {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+}
+
+/* Light Mode */
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.light-mode header {
+    background-color: #f0f0f0;
+}
+
+.light-mode nav {
+    background-color: #f0f0f0;
+}
+
+.light-mode button {
+    background-color: #ddd;
+    color: black;
+}
+
+
+
+
+.light-mode button:hover {
+    background-color: #bbb;
+}
+
+.light-mode .popular-card,
+.light-mode .latest-cheat,
+.light-mode .cheat-card,
+.light-mode .advertisement,
+.light-mode .latest-guides,
+.light-mode .news-card,
+.light-mode .most-popular,
+.light-mode .latest-news {
+    background-color: #e0e0e0;
+}
+
+.light-mode .footer {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.light-mode .user-email {
+    color: black;
+}
+
+.light-mode .logout-btn {
+    background-color: darkred;
+    color: white;
+}
+
+.light-mode .search-bar {
+    background-color: white;
+    color: black;
+}
+
+.light-mode .search-icon {
+    filter: invert(0);
+}
+
+/* Force all text inside Light Mode to Black */
+/* Force all text inside Light Mode to Black */
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode h4,
+.light-mode h5,
+.light-mode h6,
+.light-mode p,
+.light-mode a,
+.light-mode span,
+.light-mode div,
+.light-mode li {
+    color: black !important;
+}
+/* Additional text color fixes for other UI elements */
+.light-mode button, 
+.light-mode .user-email, 
+.light-mode .search-bar,
+.light-mode .search-icon {
+    color: black !important;
+}
+
+/* Fixing any text that might remain white in specific elements */
+.light-mode .advertisement h2,
+.light-mode .news-card,
+.light-mode .game-guide-detail h1, 
+.light-mode .game-guide-detail h2, 
+.light-mode .game-guide-detail p {
+    color: black !important;
+}
+
+
+/* Fix text inside cards */
+.light-mode .advertisement h2,
+.light-mode .popular-content,
+.light-mode .cheat-content,
+.light-mode .latest-guides,
+.light-mode .news-card,
+.light-mode .latest-news,
+.light-mode .most-popular,
+.light-mode .latest-cheat {
+    color: black;
+}
+
+/* Logo */
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+/* User Info */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-email {
+    color: white;
+    font-size: 14px;
+}
+
+.logout-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .content-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categories button {
+        width: 80%;
+    }
+
+    .content-grid, .game-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .latest-guides, .most-popular, .latest-cheat {
+        width: 90%;
+    }
+
+    .lg-image {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lg-image img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories button {
+        width: 100%;
+    }
+
+    .lg-image img {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}

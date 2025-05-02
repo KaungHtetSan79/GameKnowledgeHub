@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Game Knowledge Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script src="auth.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .contact-logo img {
+            max-width: 400px;
+            width: 100%;
+            border-radius: 12px;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .contact-form h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            padding: 12px;
+            border: none;
+            background-color: black;
+            color: white;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: grey;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .logo h2 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-items {
+            display: flex;
+            gap: 10px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .nav-items {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+            }
+
+            .nav-items.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../image/Logo.png" alt="Logo">
+        </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search bar" class="search-bar">
+            <img src="../image/Search.png" alt="Search" class="search-icon">
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav>
+            <div class="nav-items">
+                <a href="index.html"><button>Home</button></a>
+                <a href="game-guides.html"><button>Game Guides</button></a>
+                <a href="news.html"><button>News</button></a>
+                <a href="contact.html"><button>Contact</button></a>
+                <a href="about.html"><button>About Us</button></a>
+                <div id="auth-container"></div>
+                <a href="edit-profile.html"><button>Edit Profile</button></a>
+                <button id="theme-toggle">Toggle Mode</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-us">
+            <div class="contact-container">
+                <div class="contact-logo">
+                    <img src="../image/Logo.png" alt="Contact Us Logo">
+                </div>
+
+                <div class="contact-form">
+                    <h2>Contact Us</h2>
+                    <form>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Your email" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div w3-include-html="footer.html"></div>
+
+    <script>
+        w3.includeHTML();
+
+        function toggleMenu() {
+            const navItems = document.querySelector('.nav-items');
+            navItems.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

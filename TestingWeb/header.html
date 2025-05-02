@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Game Knowledge Hub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-email {
+            color: white;
+            font-size: 14px;
+        }
+
+        .logout-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h2><img src="../image/Logo.png" alt=""></h2>
+        </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Search bar" class="search-bar">
+            <img src="../image/Search.png" alt="Search" class="search-icon">
+        </div>
+
+        <nav>
+            <a href="home.html"><button>Home</button></a>
+            <a href="game-guides.html"><button>Game Guides</button></a>
+            <a href="news.html"><button>News</button></a>
+            <a href="contact.html"><button>Contact</button></a>
+            <a href="about.html"><button>About Us</button></a>
+            <div id="auth-container">
+                <!-- Login/Logout button will go here -->
+            </div>
+            <a href="edit-profile.html"><button>Edit Profile</button></a>
+            <button id="theme-toggle">Toggle Mode</button>
+        </nav>
+    </header>
+
+    <script>
+        function setupAuth() {
+            const authContainer = document.getElementById("auth-container");
+            const loggedInUser = localStorage.getItem("loggedInUser");
+
+            if (loggedInUser) {
+                // Show user profile and logout button
+                authContainer.innerHTML = `
+                    <div class="user-info">
+                        <span class="user-email">${loggedInUser}</span>
+                        <button class="logout-btn" onclick="logout()">Logout</button>
+                    </div>
+                `;
+            } else {
+                // Show login button
+                authContainer.innerHTML =
+                    `<button id="login-btn" onclick="window.location.href='login.html'">Login</button>`;
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem("loggedInUser");
+            setupAuth(); // Refresh header
+            window.location.href = "home.html"; // Redirect to home page after logout
+        }
+
+        function setupThemeToggle() {
+            const themeToggle = document.getElementById("theme-toggle");
+            themeToggle.addEventListener("click", function () {
+                document.body.classList.toggle("light-mode");
+                document.body.classList.toggle("dark-mode");
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            setupAuth();
+            setupThemeToggle();
+        });
+    </script>
+</body>
+
+</html>
